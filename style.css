@@ -362,6 +362,11 @@ background: linear-gradient(#7200dd,#6900cc00);
     text-align: center;
 }
 
+.info p{
+    color: #000;
+}
+
+
 
 .projects{
     background-color: #00001600;
@@ -489,6 +494,7 @@ background: linear-gradient(#7200dd,#6900cc00);
     transform: translateY(50px) translateX(px);
     height: 80px;
     align-items: center;
+    border-radius: 40px;
 }
 
 .footer-title {
