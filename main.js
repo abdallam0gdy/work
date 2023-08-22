@@ -21,3 +21,44 @@ window.onscroll = function(){
     code.style.fontSize = v + 'px';
     cards.style.left = v +'px';
 }
+
+
+let onLine = document.querySelector('.online')
+let offLine = document.querySelector('.offline')
+let body = document.querySelector('body')
+
+window.onload = function(){
+    if(window.navigator.onLine){
+        online()
+    }
+    else{
+        offline()
+    }
+}
+
+window.addEventListener("online", function(){
+    online();
+});
+
+
+
+reload.onclick = function(){
+    window.location.reload()
+}
+
+
+function online(){
+    offLine.classList.add('hide');
+    onLine.classList.remove('hide');
+    body.classList.remove('off-body')
+}
+
+function offline(){
+
+    offLine.classList.remove('hide');
+    onLine.classList.add('hide');
+    body.classList.add('off-body')
+}
+
+
+
