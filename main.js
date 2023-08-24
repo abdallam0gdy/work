@@ -21,49 +21,54 @@ window.onscroll = function(){
     cards.style.left = v +'px';
 }
 
-// let onLine = document.querySelector('.online')
-// let offLine = document.querySelector('.offline')
-// let body = document.querySelector('body')
 
-// window.onload = function(){
-//     if(window.navigator.onLine){
-//         online()
-//     }
-//     else{
-//         offline()
-//     }
-// }
-
-// window.addEventListener("online", function(){
-//     online();
-// });
-
-// window.addEventListener("offline", function(){
-//     offline();
-// });
-
-// reload.onclick = function(){
-//     window.location.reload()
-// }
-
-
-// function online(){
-//     offLine.classList.add('hide');
-//     onLine.classList.remove('hide');
-//     body.classList.remove('off-body')
-// }
-
-// function offline(){
-
-//     offLine.classList.remove('hide');
-//     onLine.classList.add('hide');
-//     body.classList.add('off-body')
-// }
 
 
 $(window).on('load', function() { // نتأكد من إكتمال الصفحة
-    $('#status').delay(3500).fadeOut('slow'); //Loading هنا نقوم بإخفاء عنصر 
-    $('#preloader').delay(3500).fadeOut('slow'); //Loading إخفاء عنصر الأب لعنصر  
-    $('body').delay(3500).css({'overflow':'visible'});// إظهار جسم الصفحة
+    $('#status').delay(350).fadeOut('slow'); //Loading هنا نقوم بإخفاء عنصر 
+    $('#preloader').delay(350).fadeOut('slow'); //Loading إخفاء عنصر الأب لعنصر  
+    $('body').delay(350).css({'overflow':'visible'});// إظهار جسم الصفحة
 });
+
+
+
+
+let onLine = document.querySelector('.online')
+let offLine = document.querySelector('.offline')
+let body = document.querySelector('body')
+
+window.onload = function(){
+    if(window.navigator.onLine){
+        online()
+    }
+    else{
+        offline()
+    }
+}
+
+window.addEventListener("online", function(){
+    online();
+});
+
+window.addEventListener("offline", function(){
+    offline();
+});
+
+reload.onclick = function(){
+    window.location.reload()
+}
+
+
+function online(){
+    offLine.classList.add('hide');
+    onLine.classList.remove('hide');
+    body.classList.remove('off-body')
+}
+
+function offline(){
+
+    offLine.classList.remove('hide');
+    onLine.classList.add('hide');
+    body.classList.add('off-body')
+}
 
